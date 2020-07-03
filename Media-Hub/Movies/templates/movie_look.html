@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+li{
+  text-align:center;
+}
+
+<div style="width:100%;height:80px">
+</div>
+
+
+<div class="details">
+<ul class="list-group list-group-flush">
+  <li class="list-group-item"><h2 style="text-align:center">{{ UpdateList.title }}</h2></li>
+  <li class="list-group-item list-group-item-dark"><p style="text-align:center">{{ UpdateList.text }}</p></li>
+  <li class="list-group-item list-group-item-warning">
+    <h4 style="text-align:center">
+      <a href="{% url 'movie_edit' UpdateList.pk %}" class="btn btn-warning btn-lg" role="button">Edit this Post</a>
+    </h4>
+  </li>
+  <li class="list-group-item list-group-item-danger">
+    <h4 style="text-align:center">
+      <a href="{% url 'movie_delete' UpdateList.pk %}" class="btn btn-danger btn-lg" role="button">Delete this Post</a>
+    </h4>
+  </li>
+</ul>
+</div>
+<!-- <div class="details">
+  <h2>{{ UpdateList.title }}</h2>
+  <p>{{ UpdateList.text }}</p>
+</div>
+
+<h4><a href="{% url 'movie_edit' UpdateList.pk %}">Edit this Post</a></h4>
+<h4><a href="{% url 'movie_delete' UpdateList.pk %}">Delete this Post</a></h4>
+ -->
+
+{% endblock %}

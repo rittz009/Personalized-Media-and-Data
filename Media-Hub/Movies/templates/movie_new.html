@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div style="width:100%;height:80px">
+</div>
+
+
+<div class="container">
+
+<h1> ENTER YOUR NEW MOVIE SUGGESTION HERE:</h1>
+
+<form action="" method="POST">
+  {% csrf_token %}
+
+  {{ form.as_p }}
+  <input type="submit" name="submit" value="save">
+
+</form>
+
+</div>
+{% endblock %}
